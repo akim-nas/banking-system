@@ -1,0 +1,5 @@
+# ignore .o files
+*.o
+
+# output
+output.exe
