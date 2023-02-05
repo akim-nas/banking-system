@@ -1,10 +1,15 @@
-#include <ios>
+/* std lib */
 #include <iostream>
 #include <limits>
 #include <cstring>
 
+/* classes */
 #include "create.h"
 
+/* functions */
+#include "functions.h"
+
+/* MACROS */
 #define STREAM std::numeric_limits<std::streamsize>::max() /* cin.ignore() */
 
 int main() {
@@ -14,17 +19,8 @@ int main() {
               << "[1] Create Account\n"                         /* prompt */
               << "[2] Login\n";                                 /* prompt */
     
-    std::cin  >> log_or_create; /* user login/create response */
-
     /* prevent unwanted input */
-    while (std::cin.fail() || (log_or_create < 1 || log_or_create > 2)) {
-        std::cin.clear();
-        std::cin.ignore(STREAM, '\n');
-
-        std::cout << "Invalid input, please input a number listed above: ";
-        
-        std::cin  >> log_or_create;
-    }
+    log_or_create = UserInput<int>(1, 2);
 
 
     switch (log_or_create) {
@@ -33,31 +29,15 @@ int main() {
 
             /* get user name */
             std::cout << "Enter name for account: ";
-            std::cin  >> user_name;
 
             /* make input valid */
-            while (std::cin.fail()) {
-                std::cin.clear();
-                std::cin.ignore(STREAM, '\n');
-
-                std::cout << "Invalid input, please enter again: ";
-
-                std::cin  >> user_name;
-            }
+            user_name = UserInput<std::string>(0, 0);
 
             /* get user pwd */
             std::cout << "Enter password for account: ";
-            std::cin  >> user_pwd;
 
             /* make input valid */
-            while (std::cin.fail()) {
-                std::cin.clear();
-                std::cin.ignore(STREAM, '\n');
-
-                std::cout << "Invalid input, please enter again: ";
-
-                std::cin  >> user_pwd;
-            }
+            user_pwd = UserInput<std::string>(0, 0);
 
             Create NewUser(user_name, user_pwd); /* store info of new user */
 
