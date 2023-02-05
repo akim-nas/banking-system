@@ -1,7 +1,14 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
 
-template <typename T>
-T UserInput(int min, int max);
+#include <iostream>
+#include <limits>
+#include <cstring>
+
+#define STREAM std::numeric_limits<std::streamsize>::max()
+
+int UserInput(int , int);
+
+std::string UserInput();
 
 #endif /* FUNCTIONS */

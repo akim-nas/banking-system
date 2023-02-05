@@ -1,4 +1,4 @@
-output: main.o create.o
+output: main.o create.o functions.o
 	g++ main.o create.o functions.o -o output
 
 main.o: main.cpp

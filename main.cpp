@@ -1,12 +1,8 @@
-/* std lib */
 #include <iostream>
 #include <limits>
 #include <cstring>
 
-/* classes */
 #include "create.h"
-
-/* functions */
 #include "functions.h"
 
 /* MACROS */
@@ -20,7 +16,7 @@ int main() {
               << "[2] Login\n";                                 /* prompt */
     
     /* prevent unwanted input */
-    log_or_create = UserInput<int>(1, 2);
+    log_or_create = UserInput(1, 2);
 
 
     switch (log_or_create) {
@@ -29,15 +25,11 @@ int main() {
 
             /* get user name */
             std::cout << "Enter name for account: ";
-
-            /* make input valid */
-            user_name = UserInput<std::string>(0, 0);
+            user_name = UserInput(); /* make input valid */
 
             /* get user pwd */
             std::cout << "Enter password for account: ";
-
-            /* make input valid */
-            user_pwd = UserInput<std::string>(0, 0);
+            user_pwd = UserInput(); /* make input valid */
 
             Create NewUser(user_name, user_pwd); /* store info of new user */
 
