@@ -4,7 +4,7 @@ output: main.o create.o
 main.o: main.cpp
 	g++ -c main.cpp
 
-create.o: create.cpp create.h
+create.o: create.cpp create.hpp
 	g++ -c create.cpp
 
 clean:
