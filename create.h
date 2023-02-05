@@ -1,5 +1,5 @@
-#ifndef CREATE_H
-#define CREATE_H
+#ifndef CREATE
+#define CREATE
 
 #include <iostream>
 #include <cstring>
@@ -15,4 +15,4 @@ private:
     void StoreInfo();
 };
 
-#endif
+#endif /* CREATE */

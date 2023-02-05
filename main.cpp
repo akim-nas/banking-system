@@ -3,7 +3,9 @@
 #include <limits>
 #include <cstring>
 
-#include "create.hpp"
+#include "create.h"
+
+#define STREAM std::numeric_limits<std::streamsize>::max() /* cin.ignore() */
 
 int main() {
     unsigned int log_or_create;
@@ -17,7 +19,7 @@ int main() {
     /* prevent unwanted input */
     while (std::cin.fail() || (log_or_create < 1 || log_or_create > 2)) {
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore(STREAM, '\n');
 
         std::cout << "Invalid input, please input a number listed above: ";
         
@@ -36,7 +38,7 @@ int main() {
             /* make input valid */
             while (std::cin.fail()) {
                 std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin.ignore(STREAM, '\n');
 
                 std::cout << "Invalid input, please enter again: ";
 
@@ -50,7 +52,7 @@ int main() {
             /* make input valid */
             while (std::cin.fail()) {
                 std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin.ignore(STREAM, '\n');
 
                 std::cout << "Invalid input, please enter again: ";
 
@@ -67,6 +69,5 @@ int main() {
             break;
         }
     }
-
     return 0;
 }

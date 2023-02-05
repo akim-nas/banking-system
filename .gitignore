@@ -3,3 +3,6 @@
 
 # output
 output.exe
+
+# storage
+*.txt
