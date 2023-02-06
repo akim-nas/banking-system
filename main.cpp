@@ -3,6 +3,7 @@
 #include <string>
 
 #include "User.h"
+#include "Admin.h"
 #include "functions.h"
 
 /* MACROS */
@@ -31,7 +32,7 @@ int main() {
             std::cout << "Enter password for account: ";
             user_pwd = UserInput(); /* make input valid */
 
-            Create NewUser(user_name, user_pwd); /* store info of new user */
+            Admin::Create NewUser(user_name, user_pwd); /* store info of new user */
 
             break;
         }
