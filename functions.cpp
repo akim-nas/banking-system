@@ -1,6 +1,6 @@
 #include <iostream>
 #include <limits>
-#include <cstring>
+#include <string>
 
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
@@ -21,15 +21,15 @@ int UserInput(int min = 0, int max = 0) {
 
 std::string UserInput() {
     std::string user_input;
-    std::cin >> user_input;
+    std::cin.ignore();
+    getline(std::cin, user_input);
 
     while (std::cin.fail()) {
         std::cin.clear();
         std::cin.ignore(STREAM, '\n');
 
         std::cout << "Invalid input: ";
-
-        std::cin  >> user_input;
+        getline(std::cin, user_input);
     }
     return user_input;
 }

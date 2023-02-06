@@ -1,6 +1,5 @@
 #include <iostream>
 #include <limits>
-#include <cstring>
 
 #include "User.h"
 #include "functions.h"
