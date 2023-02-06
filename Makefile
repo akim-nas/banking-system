@@ -1,11 +1,11 @@
-output: main.o create.o functions.o
-	g++ main.o create.o functions.o -o output
+output: main.o user.o functions.o
+	g++ main.o user.o functions.o -o output
 
 main.o: main.cpp
 	g++ -c main.cpp
 
-create.o: create.cpp create.h
-	g++ -c create.cpp
+user.o: user.cpp user.h
+	g++ -c user.cpp
 
 functions.o: functions.cpp functions.h
 	g++ -c functions.cpp
