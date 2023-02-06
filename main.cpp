@@ -2,8 +2,8 @@
 #include <limits>
 #include <string>
 
-#include "User.h"
-#include "Admin.h"
+#include "user.h"
+#include "admin.h"
 #include "functions.h"
 
 /* MACROS */

@@ -1,9 +1,8 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
 
-#include <iostream>
 #include <limits>
-#include <cstring>
+#include <string>
 
 #define STREAM std::numeric_limits<std::streamsize>::max()
 

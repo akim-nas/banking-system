@@ -1,8 +1,7 @@
-#include <iostream>
 #include <fstream>
 #include <string>
 
-#include "Admin.h"
+#include "admin.h"
 
 int Admin::Create::new_balance = 0;
 
