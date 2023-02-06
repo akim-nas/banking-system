@@ -4,7 +4,7 @@
 
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
-int UserInput(int min=0, int max=0) {
+int UserInput(int min = 0, int max = 0) {
     int user_input;
     std::cin >> user_input;
 
@@ -14,7 +14,7 @@ int UserInput(int min=0, int max=0) {
 
         std::cout << "Invalid input: ";
 
-        std::cin >> user_input;
+        std::cin  >> user_input;
     }
     return user_input;
 }
@@ -29,7 +29,7 @@ std::string UserInput() {
 
         std::cout << "Invalid input: ";
 
-        std::cin >> user_input;
+        std::cin  >> user_input;
     }
     return user_input;
 }
