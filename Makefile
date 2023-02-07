@@ -1,17 +1,17 @@
 output: main.o user.o admin.o functions.o
-	g++ main.o user.o admin.o functions.o -o output
+	g++ --std=c++17 -O2 -Wall main.o user.o admin.o functions.o -o output
 
 main.o: main.cpp
-	g++ -c main.cpp
+	g++ --std=c++17 -O2 -Wall -c main.cpp
 
 admin.o: admin.cpp admin.h
-	g++ -c admin.cpp
+	g++ --std=c++17 -O2 -Wall -c admin.cpp
 
 user.o: user.cpp user.h
-	g++ -c user.cpp
+	g++ --std=c++17 -O2 -Wall -c user.cpp
 
 functions.o: functions.cpp functions.h
-	g++ -c functions.cpp
+	g++ --std=c++17 -O2 -Wall -c functions.cpp
 
 clean:
 	del *.o output.exe
