@@ -2,9 +2,12 @@
 #include <limits>
 #include <string>
 
+#include "functions.h"
+#include "admin.h"
+
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
-int UserInput(int min = 0, int max = 0) {
+int UserInput(int min, int max) {
     int user_input;
     std::cin >> user_input;
 

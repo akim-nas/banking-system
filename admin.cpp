@@ -1,5 +1,4 @@
 #include <fstream>
-#include <string>
 
 #include "admin.h"
 
@@ -10,14 +9,4 @@ Admin::Create::Create(std::string name, std::string pwd) {
     new_pwd   = pwd;
 
     StoreInfo();
-}
-
-void Admin::Create::StoreInfo() {
-    std::ofstream file;
-
-    file.open("storage.txt", std::ofstream::out | std::ofstream::app);
-        file << new_uname   << "\n";
-        file << new_pwd     << "\n";
-        file << new_balance << "\n\n";
-    file.close();
 }
