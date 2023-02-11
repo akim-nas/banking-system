@@ -2,7 +2,6 @@
 #include <limits>
 #include <string>
 
-#include "functions.h"
 #include "admin.h"
 
 #define STREAM std::numeric_limits<std::streamsize>::max()
@@ -16,7 +15,6 @@ int UserInput(int min, int max) {
         std::cin.ignore(STREAM, '\n');
 
         std::cout << "Invalid input: ";
-
         std::cin  >> user_input;
     }
     return user_input;

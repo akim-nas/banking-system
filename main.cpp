@@ -31,7 +31,7 @@ int main() {
             std::cout << "Enter password for account: ";
             user_pwd = UserInput(); /* make input valid */
 
-            Admin::Create NewUser(user_name, user_pwd); /* store info of new user */
+            admn::Create NewUser(user_name, user_pwd); /* store info of new user */
             break;
         }
 

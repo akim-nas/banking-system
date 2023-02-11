@@ -4,17 +4,19 @@
 #include <string>
 #include <fstream>
 
-namespace Admin {
+namespace admn {
     class Create {
     private:
         void StoreInfo() {
-            std::ofstream file("storage.txt", std::ofstream::out | std::ofstream::app);
+            std::ofstream datafile;
 
-            file << new_uname   << "\n";
-            file << new_pwd     << "\n";
-            file << new_balance << "\n\n";
+            datafile.open("storage.txt", std::ios::out | std::ios::app);
 
-            file.close();
+            datafile << this->new_uname   << "\n";
+            datafile << this->new_pwd     << "\n";
+            datafile << this->new_balance << "\n\n";
+
+            datafile.close();
         }
 
     public:
