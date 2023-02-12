@@ -8,7 +8,7 @@
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
 /* Input for number types */
-int func::UserInput(int min = MIN, int max = MAX) {
+int UserInput(int min = MIN, int max = MAX) {
     int usr_inp;
 
     std::cin >> usr_inp;
@@ -23,11 +23,10 @@ int func::UserInput(int min = MIN, int max = MAX) {
     return usr_inp;
 }
 
-/* Input for strings */
-std::string func::UserInput() {
+/* Input for strings: use std::cin.ignore() for string */
+std::string UserInput() {
     std::string usr_inp;
 
-    std::cin.ignore(STREAM, '\n');
     getline(std::cin, usr_inp);
     while (std::cin.fail()) {
         std::cin.clear();

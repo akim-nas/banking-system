@@ -3,9 +3,7 @@
 
 #include <string>
 
-namespace func {
-    int UserInput(int, int);
-    std::string UserInput();
-}
+int UserInput(int, int);
+std::string UserInput();
 
 #endif /* FUNCTIONS */
