@@ -7,5 +7,8 @@
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
 int main() {
+    std::string name, pwd;
+    int num;
+
     return 0;
 }
