@@ -1,5 +1,8 @@
 # banking-system
 
+### Dependencies
+- GNU
+
 ### How to Install
 1. Clone Repo
 ```bash
@@ -11,5 +14,5 @@ cd banking-system/
 ```
 3. Build file
 ```bash
-make
+make -C build/
 ```
