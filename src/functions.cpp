@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 
-#include "functions.h"
+#include "../include/functions.h"
 
 #define MIN 0
 #define MAX 100

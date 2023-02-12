@@ -1,11 +1,15 @@
-output: main.o functions.o
-	g++ --std=c++20 -O2 -Wall main.o functions.o -o bank
+TARGET := ../bank.exe
+MAIN := ../src/main.cpp
+FUNCTIONS := ../src/functions.cpp
 
-main.o: main.cpp
-	g++ --std=c++20 -O2 -Wall -c main.cpp
+bank: main.o functions.o
+	g++ main.o functions.o -o $(TARGET)
 
-functions.o: functions.cpp functions.h
-	g++ --std=c++20 -O2 -Wall -c functions.cpp
+main.o: $(MAIN)
+	g++ -c $(MAIN)
+
+functions.o: $(FUNCTIONS)
+	g++ -c $(FUNCTIONS)
 
 clean:
-	del *.o bank.exe
+	del *.o
