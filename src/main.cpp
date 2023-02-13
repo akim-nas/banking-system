@@ -11,7 +11,7 @@ int main() {
     int num;
     
     std::cout << "Input num: ";
-    num = UserInput(1, 100);
+    num = UserInput<int>(1, 100);
 
     std::cout << "Name: ";
 

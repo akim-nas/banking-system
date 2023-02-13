@@ -3,7 +3,8 @@
 
 #include <string>
 
-int UserInput(int, int);
+template<typename num>
+num UserInput(int, int);
 std::string UserInput();
 
 #endif /* FUNCTIONS */

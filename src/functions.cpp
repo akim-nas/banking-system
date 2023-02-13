@@ -3,13 +3,12 @@
 
 #include "../include/functions.h"
 
-#define MIN 0
-#define MAX 100
 #define STREAM std::numeric_limits<std::streamsize>::max()
 
 /* Input for number types */
-int UserInput(int min = MIN, int max = MAX) {
-    int usr_inp;
+template<typename num>
+num UserInput(int min, int max) { /* must use range */
+    num usr_inp;
 
     std::cin >> usr_inp;
     while (std::cin.fail() || (usr_inp < min || usr_inp > max)) {
